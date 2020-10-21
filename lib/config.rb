@@ -1,6 +1,5 @@
+#!/usr/bin/env ruby
 # frozen_string_literal: true
-
-require 'twitter'
 
 client = Twitter::REST::Client.new do |config|
   config.consumer_key = ''
