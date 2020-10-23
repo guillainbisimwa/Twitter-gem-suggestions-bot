@@ -45,10 +45,9 @@ class RubyOnTwitter
     end
   end
 
-  def post_random_tweet; end
-
-  def check_if_tweeted?(tweet_id)
-    false if tweet_id
+  def post_random_tweet
+    hash_100_tweet = @hash_100_tweet.to_a.sample
+    @client.update("A gem for you! ##{hash_100_tweet[1][0]}, #{hash_100_tweet[1][1]}")
   end
 
   def test
@@ -59,4 +58,5 @@ end
 
 r = RubyOnTwitter.new
 r.fetch_100_tweet
-r.text_
+#r.text_
+r.post_random_tweet
