@@ -1,4 +1,5 @@
 require 'dotenv'
+Dotenv.load('../.env')
 require './lib/ruby_on_twitter'
 
 describe 'Format a tweet method' do

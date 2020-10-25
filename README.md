@@ -30,7 +30,8 @@
 6. Copy and paste the following code into the Terminal:
    `git https://github.com/guillainbisimwa/Twitter-gem-suggestions-bot.git`
 7. Run `cd Twitter-gem-suggestions-bot`
-8. Run `ruby bin/main.rb`
+8. Run `cd bin`
+9. Run `ruby main.rb`
 
 ## How to run the RSpec test
 
