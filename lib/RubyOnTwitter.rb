@@ -1,5 +1,5 @@
-#!/usr/bin/env ruby
 # frozen_string_literal: true
+# rubocop:disable Metrics/MethodLength
 
 require 'dotenv'
 Dotenv.load('../.env')
@@ -162,3 +162,5 @@ class String
     colorize(36)
   end
 end
+
+# rubocop:enable Metrics/MethodLength
