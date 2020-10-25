@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require 'dotenv/load'
+require 'dotenv'
+Dotenv.load('../.env')
 require 'twitter'
 
 class RubyOnTwitter
@@ -14,7 +15,7 @@ class RubyOnTwitter
       config.access_token = ENV['ACCESS_TOKEN']
       config.access_token_secret = ENV['ACCESS_TOKEN_SECRET']
     end
-
+    p @client
     @stream = Twitter::Streaming::Client.new do |config|
       config.consumer_key = ENV['CONSUMER_KEY']
       config.consumer_secret = ENV['CONSUMER_SECRET']
@@ -48,6 +49,7 @@ class RubyOnTwitter
   def post_random_tweet
     hash_100_tweet = @hash_100_tweet.to_a.sample
     @client.update("A gem for you! ##{hash_100_tweet[1][0]}, #{hash_100_tweet[1][1]} #{hash_100_tweet[1][2]}")
+    #return "A gem for you! ##{hash_100_tweet[1][0]}, #{hash_100_tweet[1][1]} #{hash_100_tweet[1][2]}"
   end
 
   def mode_hepl_needed_tweet
