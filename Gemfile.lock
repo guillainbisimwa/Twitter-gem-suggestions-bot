@@ -1,7 +1,21 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    diff-lcs (1.4.4)
     dotenv (2.7.6)
+    rspec (3.9.0)
+      rspec-core (~> 3.9.0)
+      rspec-expectations (~> 3.9.0)
+      rspec-mocks (~> 3.9.0)
+    rspec-core (3.9.3)
+      rspec-support (~> 3.9.3)
+    rspec-expectations (3.9.3)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-mocks (3.9.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-support (3.9.4)
 
 PLATFORMS
   ruby
@@ -9,6 +23,7 @@ PLATFORMS
 DEPENDENCIES
   bundler
   dotenv
+  rspec
 
 BUNDLED WITH
    2.1.4
