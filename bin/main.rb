@@ -4,11 +4,11 @@
 require '../lib/RubyOnTwitter'
 
 puts "\n                 RUBY GEM SUGGESTIONS BOT"
-puts "                 ########################\n"
+puts "                 ########################\n\n"
 puts "               https://twitter.com/RomoteB\n".pink
 
-puts 'Welcome to a twitter bot that posts inspirational gem suggestions
- and tags ruby developer who need help while developping in ruby'.light_blue
+puts 'Welcome to a Twitter bot that posts inspirational gem suggestions
+    and tags ruby developer who needs help while developing in ruby'.light_blue
 
 puts "\n      It can be triggered on the command line/terminal.\n".red
 
@@ -18,11 +18,11 @@ ruby_twitter = RubyOnTwitter.new
 try_count = 0
 
 loop do
-  puts 'Make a choice: '
+  puts 'Make a choice : '
   print '1) '.yellow
-  puts 'Post on twitter a random gem suggestion.'
+  puts 'Post on Twitter a random gem suggestion.'
   print '2) '.yellow
-  puts 'Look for recents tweets asking help about ruby develpment using our list of #'
+  puts 'Look for recent tweets asking for help about ruby development using our list of #'
   print '3) '.yellow
   puts 'Exit '
 
@@ -33,7 +33,7 @@ loop do
     ruby_twitter.fetch_100_tweet
     puts ruby_twitter.post_random_tweet.green
 
-    puts "\nYou have successfully generate a post, go on twitter and check for it\n".blue
+    puts "\nYou have successfully generated a post, go on Twitter and check for it\n".blue
 
     break
 
@@ -51,9 +51,9 @@ loop do
     print '#search_gem_suggest, '.yellow
     print '#admin_gem_suggest, '.light_blue
     puts '#admin_panels_gem_suggest'.yellow
-    puts "\nWe will also suggest a gem usefull for any of your choice."
+    puts "\nWe will also suggest a useful gem for any of your choices."
 
-    puts "Please go on twitter and post a tweet, look at the exemble below:  \n\n"
+    puts "Please go to Twitter and post a tweet, see the example below : \n\n"
     puts '``I want to know how to upload files in ruby #upload_files_gem_suggest``'.blue
 
     puts "\nHave you posted? (yes) (no)"
