@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# frozen_string_literal: true
+# rubocop:disable Metrics/BlockLength
 
 require '../lib/RubyOnTwitter'
 
@@ -85,3 +85,5 @@ loop do
     next
   end
 end
+
+# rubocop:enable Metrics/BlockLength
