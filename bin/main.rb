@@ -12,7 +12,6 @@ and tags ruby developer who need help while developping in ruby'.light_blue
 puts "\nIt can be triggered on the command line/terminal.".red
 
 
-
 r = RubyOnTwitter.new
 # r.fetch_100_tweet
 r.mode_hepl_needed_tweet
