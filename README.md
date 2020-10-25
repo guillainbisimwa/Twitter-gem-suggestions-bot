@@ -2,7 +2,9 @@
 
 # RUBY GEM SUGGESTIONS BOT
 
-> This is my Capstone solo project for Ruby Microverse Main Technical Curriculum section. This is a Twitter bot that posts inspirational gem suggestions, reply to tweets, follow and tags ruby developer who needs help while developing in ruby using our list of #. #code_quality_gem_suggest, #testing_gem_suggest, #debugging_gem_suggest, #deployment_gem_suggest, #authentication_gem_suggest, #authorization_gem_suggest, #uploading_files_gem_suggest, #upload_files_gem_suggest, #search_gem_suggest, #admin_gem_suggest, #admin_panels_gem_suggest
+> This is my Capstone solo project for Ruby Microverse Main Technical Curriculum section. This is a Twitter bot that posts inspirational gem suggestions, reply to tweets, follow and tags ruby developer who needs help while developing in ruby using our list of #.
+
+>#code_quality_gem_suggest, #testing_gem_suggest, #debugging_gem_suggest, #deployment_gem_suggest, #authentication_gem_suggest, #authorization_gem_suggest, #uploading_files_gem_suggest, #upload_files_gem_suggest, #search_gem_suggest, #admin_gem_suggest, #admin_panels_gem_suggest
 
 
 ## Built With
