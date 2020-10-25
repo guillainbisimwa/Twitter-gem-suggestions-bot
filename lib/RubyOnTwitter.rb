@@ -15,7 +15,7 @@ class RubyOnTwitter
       config.access_token = ENV['ACCESS_TOKEN']
       config.access_token_secret = ENV['ACCESS_TOKEN_SECRET']
     end
-    p @client
+
     @stream = Twitter::Streaming::Client.new do |config|
       config.consumer_key = ENV['CONSUMER_KEY']
       config.consumer_secret = ENV['CONSUMER_SECRET']
@@ -49,7 +49,7 @@ class RubyOnTwitter
   def post_random_tweet
     hash_100_tweet = @hash_100_tweet.to_a.sample
     @client.update("A gem for you! ##{hash_100_tweet[1][0]}, #{hash_100_tweet[1][1]} #{hash_100_tweet[1][2]}")
-    #return "A gem for you! ##{hash_100_tweet[1][0]}, #{hash_100_tweet[1][1]} #{hash_100_tweet[1][2]}"
+    "A gem for you! ##{hash_100_tweet[1][0]}, #{hash_100_tweet[1][1]} #{hash_100_tweet[1][2]}"
   end
 
   def mode_hepl_needed_tweet
@@ -67,7 +67,7 @@ class RubyOnTwitter
       changing the variables on the move.'
     ]
 
-    @hash_help_dev['testing'] = [
+    @hash_help_dev['testing'] = @hash_help_dev['test'] = [
       '#RSpec suggests Behaviour Driven Development for Ruby. ',
       '#Capybara is an acceptance test framework for web applications. It flawlessly runs in tandem with RSpec.',
       '#Capybara Screenshot : is a Ruby gem for automatic saving of screenshots if a Capybara scenario breaks down. ',
@@ -105,21 +105,33 @@ class RubyOnTwitter
     ]
 
     @hash_help_dev['search'] = [
-      'Elasticsearch is a popular search system widely used in enterprises.'
+      '#Elasticsearch is a popular search system widely used in enterprises.'
     ]
 
     @hash_help_dev['admin'] = hash_help_dev['admin_panels'] = [
-      'Activeadmin is the administration framework for Ruby on Rails applications.
+      '#Activeadmin is the administration framework for Ruby on Rails applications.
       The plugin allows generating administration style interfaces.',
-      'Administrate is a Rails engine. It helps construct a user-responsive admin dashboard.'
+      '#Administrate is a Rails engine. It helps construct a user-responsive admin dashboard.'
     ]
   end
 
-  def catch_help_needed_tweet; end
+  def catch_help_needed_tweet
+    @hash_help_dev.each_with_index do |(key, value), _index|
+      print '-'
+
+      @client.search('#' + key + '_gem_suggest').take(2).each do |tweet|
+        # Like a tweet
+        @client.fav tweet
+        # Follow the owner of that tweet
+        @client.follow tweet.user
+        # Reply to the tweet
+        @client.update("@#{tweet.user.screen_name} #{value.sample}", in_reply_to_status_id: tweet.id)
+      end
+    end
+  end
 
   def help_a_tweet; end
 end
-
 
 class String
   def colorize(color_code)
