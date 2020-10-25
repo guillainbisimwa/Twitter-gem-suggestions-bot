@@ -2,7 +2,8 @@
 
 # RUBY GEM SUGGESTIONS BOT
 
-> This is my Capstone solo project for Ruby Microverse Main Technical Curriculum section. This is a Twitter bot that posts inspirational gem suggestions, reply to tweets, follow and tags ruby developer who needs help while developing in ruby.
+> This is my Capstone solo project for Ruby Microverse Main Technical Curriculum section. This is a Twitter bot that posts inspirational gem suggestions, reply to tweets, follow and tags ruby developer who needs help while developing in ruby using our list of #. #code_quality_gem_suggest, #testing_gem_suggest, #debugging_gem_suggest, #deployment_gem_suggest, #authentication_gem_suggest, #authorization_gem_suggest, #uploading_files_gem_suggest, #upload_files_gem_suggest, #search_gem_suggest, #admin_gem_suggest, #admin_panels_gem_suggest
+
 
 ## Built With
 
@@ -16,6 +17,18 @@
 - [Ruby](https://www.ruby-lang.org/en/) must be installed on your machine.
 - Text Editor
 - Ruby interface to the Twitter API.
+
+## Getting Started
+
+1. Create a twitter api account you need to [register your application with Twitter](https://apps.twitter.com/) Twitter API v1.1.
+2. Insert your api keys and secret inside a `.env` file.
+3. Open Terminal.
+4. Install dependencies by `gem install t` in the terminal
+5. Navigate to your desired location to download the contents of this repository.
+6. Copy and paste the following code into the Terminal:
+   `git https://github.com/guillainbisimwa/Twitter-gem-suggestions-bot.git`
+7. Run `cd Twitter-gem-suggestions-bot`
+8. Run `ruby bin/main.rb`
 
 ## How to run the RSpec test
 
