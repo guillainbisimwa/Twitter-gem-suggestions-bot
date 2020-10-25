@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require './lib/ruby_on_twitter'
 
 describe 'Format a tweet method' do
