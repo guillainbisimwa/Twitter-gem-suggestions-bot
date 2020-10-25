@@ -11,6 +11,15 @@
 - Twitter API
 - GitFlow
 
+## How to run the RSpec test
+
+- You need to have the RSpec installed in you computer if you don't have it follow the steps.
+
+Boot up your terminal and punch in `gem install rspec` to install RSpec. Once that’s done, you can verify your version of RSpec with rspec --version, which will output the current version of each of the packaged gems. Take a minute also to hit rspec --help and look through the various options available.
+
+- cd into the project and open a terminal.
+- In the teminal just write `rspec` to run the tests.
+
 ## Author
 
 👤 **Guillain Bisimwa**
@@ -30,7 +39,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgment
 
-- Latest RubyGems releases, for retweeting!: [@rubygems_news](https://twitter.com/RubygemsN)
+- Latest RubyGems releases, for retweeting! : [@rubygems_news](https://twitter.com/RubygemsN)
 
 ## 📝 License
 
