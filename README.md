@@ -11,6 +11,12 @@
 - Twitter API
 - GitFlow
 
+## Prerequisites
+
+- [Ruby](https://www.ruby-lang.org/en/) must be installed on your machine.
+- Text Editor
+- Ruby interface to the Twitter API.
+
 ## How to run the RSpec test
 
 - You need to have the RSpec installed in you computer if you don't have it follow the steps.
