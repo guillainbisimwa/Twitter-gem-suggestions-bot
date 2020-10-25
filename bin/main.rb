@@ -1,37 +1,20 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require 'dotenv/load'
-require 'twitter'
+require '../lib/RubyOnTwitter'
 
-client = Twitter::REST::Client.new do |config|
-  config.consumer_key = ENV['CONSUMER_KEY']
-  config.consumer_secret = ENV['CONSUMER_SECRET']
-  config.access_token = ENV['ACCESS_TOKEN']
-  config.access_token_secret = ENV['ACCESS_TOKEN_SECRET']
-end
+puts "\nRUBY GEM SUGGESTIONS BOT".blue
+puts "########################\n\n"
 
-stream = Twitter::Streaming::Client.new do |config|
-  config.consumer_key = ENV['CONSUMER_KEY']
-  config.consumer_secret = ENV['CONSUMER_SECRET']
-  config.access_token = ENV['ACCESS_TOKEN']
-  config.access_token_secret = ENV['ACCESS_TOKEN_SECRET']
-end
+puts 'Welcome to a twitter bot that posts inspirational gem suggestions
+and tags ruby developer who need help while developping in ruby'.light_blue
 
-client.search('#hirerubybot').take(1).each do |tweet|
-  client.update("@#{tweet.user.screen_name} really ruby is alive!! https://isrubydead.com/ ")
-end
-
-# my topics to serach
-topics = ['#ruby', '#hire', '#remote']
-stream.filter(track: topics.join(',')) do |tweet|
-  if tweet.is_a?(Twitter::Tweet)
-    puts tweet.text
-    # r_client.fav tweet
-  end
-end
+puts "\nIt can be triggered on the command line/terminal.".red
 
 
-tweets = client.user_timeline('@RubygemsN', count: 8, since_id: 1319379892555845632) #max_id
-tweets.each { |tweet| puts tweet.full_text }
 
+r = RubyOnTwitter.new
+# r.fetch_100_tweet
+r.mode_hepl_needed_tweet
+# r.text_
+# r.post_random_tweet
