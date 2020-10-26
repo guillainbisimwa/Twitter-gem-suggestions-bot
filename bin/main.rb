@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # rubocop:disable Metrics/BlockLength
 
-require '../lib/ruby_on_twitter'
+require_relative '../lib/ruby_on_twitter'
 
 puts "\n                 RUBY GEM SUGGESTIONS BOT"
 puts "                 ########################\n\n"

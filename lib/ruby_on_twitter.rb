@@ -1,6 +1,6 @@
 # rubocop:disable Metrics/MethodLength
 
-require_relative './twitter_key'
+require_relative './twitter_key_env'
 require 'twitter'
 
 class RubyOnTwitter
@@ -29,12 +29,6 @@ class RubyOnTwitter
     v = tweet.gsub(/ \(.*\): /, '***')
     v = v.gsub(/ https/, '***https')
     v.split('***')
-  end
-
-  def text_
-    @hash_help_dev.each_with_index do |(_k, v), _index|
-      puts "#{v} \n\n"
-    end
   end
 
   def post_random_tweet
@@ -120,8 +114,6 @@ class RubyOnTwitter
       end
     end
   end
-
-  def help_a_tweet; end
 end
 
 class String
