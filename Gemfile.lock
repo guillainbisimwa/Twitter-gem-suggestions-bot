@@ -4,6 +4,8 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     buftok (0.2.0)
+    bundle (0.0.1)
+      bundler
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     equalizer (0.0.11)
@@ -49,6 +51,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundle
   bundler
   twitter
 
