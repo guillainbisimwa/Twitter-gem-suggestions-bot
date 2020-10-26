@@ -1,7 +1,7 @@
 # rubocop:disable Metrics/MethodLength
 
 require_relative './twitter_key'
-require 't'
+require 'twitter'
 
 class RubyOnTwitter
   attr_reader :hash_100_tweet, :hash_help_dev, :id_tweeted
