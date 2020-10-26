@@ -2,7 +2,7 @@
 # rubocop:disable Metrics/BlockLength
 
 require_relative '../lib/ruby_on_twitter'
-require_relative '../lib/String'
+require_relative '../lib/string'
 
 puts "\n                 RUBY GEM SUGGESTIONS BOT"
 puts "                 ########################\n\n"
