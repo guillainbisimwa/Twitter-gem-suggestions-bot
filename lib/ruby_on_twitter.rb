@@ -17,12 +17,13 @@ class RubyOnTwitter
   end
 
   def fetch_100_tweet
-    tweets = @client.user_timeline('@RubygemsN', count: 50) # max_id, since_id
+    tweets = @client.user_timeline('@RubygemsN', count: 100)
     @hash_100_tweet = {}
 
     tweets.each do |tweet|
       @hash_100_tweet[tweet.id.to_s] = format_text(tweet.full_text) unless tweet.id.nil?
     end
+    @hash_100_tweet.length
   end
 
   def format_text(tweet)
