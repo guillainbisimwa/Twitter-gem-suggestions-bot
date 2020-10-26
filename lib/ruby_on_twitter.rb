@@ -1,6 +1,6 @@
 # rubocop:disable Metrics/MethodLength
 
-require_relative './twitter_key_env'
+require_relative './twitter_key'
 require 'twitter'
 
 class RubyOnTwitter

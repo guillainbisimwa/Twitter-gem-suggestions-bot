@@ -1,6 +1,6 @@
 require './lib/ruby_on_twitter'
 
-describe 'Fetch 50 tweets' do
+describe 'Fetch 100 tweets' do
   let(:ruby_twitter) { RubyOnTwitter.new }
 
   it 'Should not return nil' do
