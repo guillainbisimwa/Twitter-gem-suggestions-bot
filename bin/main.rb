@@ -2,6 +2,7 @@
 # rubocop:disable Metrics/BlockLength
 
 require_relative '../lib/ruby_on_twitter'
+require_relative '../lib/String'
 
 puts "\n                 RUBY GEM SUGGESTIONS BOT"
 puts "                 ########################\n\n"
@@ -60,8 +61,8 @@ loop do
     choice_status = gets.chomp.to_s.upcase
     case choice_status
     when 'YES'
-      ruby_twitter.mode_hepl_needed_tweet
-      ruby_twitter.catch_help_needed_tweet
+      ruby_twitter.suggest_tweet
+      ruby_twitter.catch_suggest_tweet
       puts "\nTHANKS, go and check our reply to your tweet, we'll tag you and suggest a gem for you ".green
 
     when 'NO'

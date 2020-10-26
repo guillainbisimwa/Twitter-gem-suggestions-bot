@@ -37,7 +37,7 @@ class RubyOnTwitter
     "A gem for you! ##{hash_100_tweet[1][0]}, #{hash_100_tweet[1][1]} #{hash_100_tweet[1][2]}"
   end
 
-  def mode_hepl_needed_tweet
+  def suggest_tweet
     @hash_help_dev = {}
 
     @hash_help_dev['code_quality'] = [
@@ -100,7 +100,7 @@ class RubyOnTwitter
     ]
   end
 
-  def catch_help_needed_tweet
+  def catch_suggest_tweet
     @hash_help_dev.each_with_index do |(key, value), _index|
       print '-'
 
@@ -113,36 +113,6 @@ class RubyOnTwitter
         @client.update("@#{tweet.user.screen_name} #{value.sample}", in_reply_to_status_id: tweet.id)
       end
     end
-  end
-end
-
-class String
-  def colorize(color_code)
-    "\e[#{color_code}m#{self}\e[0m"
-  end
-
-  def red
-    colorize(31)
-  end
-
-  def green
-    colorize(32)
-  end
-
-  def yellow
-    colorize(33)
-  end
-
-  def blue
-    colorize(34)
-  end
-
-  def pink
-    colorize(35)
-  end
-
-  def light_blue
-    colorize(36)
   end
 end
 
