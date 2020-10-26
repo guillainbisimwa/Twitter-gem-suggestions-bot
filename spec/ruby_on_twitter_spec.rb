@@ -1,4 +1,4 @@
-require_relative './lib/ruby_on_twitter'
+require_relative './../lib/ruby_on_twitter.rb'
 
 describe 'Fetch 100 tweets' do
   let(:ruby_twitter) { RubyOnTwitter.new }
