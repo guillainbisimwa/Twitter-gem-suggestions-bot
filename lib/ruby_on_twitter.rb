@@ -1,25 +1,18 @@
 # rubocop:disable Metrics/MethodLength
 
-require 'dotenv'
-Dotenv.load('../.env')
+require_relative './twitter_key'
 require 'twitter'
 
 class RubyOnTwitter
   attr_reader :hash_100_tweet, :hash_help_dev, :id_tweeted
 
   def initialize
+    tw = TwitterKey.new
     @client = Twitter::REST::Client.new do |config|
-      config.consumer_key = ENV['CONSUMER_KEY']
-      config.consumer_secret = ENV['CONSUMER_SECRET']
-      config.access_token = ENV['ACCESS_TOKEN']
-      config.access_token_secret = ENV['ACCESS_TOKEN_SECRET']
-    end
-
-    @stream = Twitter::Streaming::Client.new do |config|
-      config.consumer_key = ENV['CONSUMER_KEY']
-      config.consumer_secret = ENV['CONSUMER_SECRET']
-      config.access_token = ENV['ACCESS_TOKEN']
-      config.access_token_secret = ENV['ACCESS_TOKEN_SECRET']
+      config.consumer_key = tw.consumer_key
+      config.consumer_secret = tw.consumer_secret
+      config.access_token = tw.access_token
+      config.access_token_secret = tw.access_token_secret
     end
   end
 
@@ -35,8 +28,7 @@ class RubyOnTwitter
   def format_text(tweet)
     v = tweet.gsub(/ \(.*\): /, '***')
     v = v.gsub(/ https/, '***https')
-    formated_tweet = v.split('***')
-    formated_tweet
+    v.split('***')
   end
 
   def text_
