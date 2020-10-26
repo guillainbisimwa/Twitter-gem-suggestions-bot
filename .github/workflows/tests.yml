@@ -15,7 +15,7 @@ jobs:
         run: |
           [ -f Gemfile ] && bundle --deployment
           gem install --no-document rspec:'~>3.0'
-      - name: RSpec Report
-        run: rspec --force-color --format documentation
       - name: Twitter API 
         run: gem install t
+      - name: RSpec Report
+        run: rspec --force-color --format documentation
