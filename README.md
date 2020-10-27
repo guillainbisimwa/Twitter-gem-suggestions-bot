@@ -23,13 +23,13 @@
 ## Getting Started
 
 1. Create a twitter api account you need to [register your application with Twitter API v1.1](https://apps.twitter.com/)
-2. Insert your api keys and secret inside  `lib/twitter_key.rb` file.
-3. Open Terminal.
-4. Install dependencies by `gem install t` in the terminal
-5. Navigate to your desired location to download the contents of this repository.
-6. Copy and paste the following code into the Terminal:
-   `git https://github.com/guillainbisimwa/Twitter-gem-suggestions-bot.git`
-7. Run `cd Twitter-gem-suggestions-bot`
+2. Open Terminal.
+3. Install dependencies by `gem install t` in the terminal.
+4. Navigate to your desired location to download the contents of this repository.
+5. Copy and paste the following code into the Terminal s:
+   `git clone https://github.com/guillainbisimwa/Twitter-gem-suggestions-bot.git`
+6. Run `cd Twitter-gem-suggestions-bot`
+7. Insert your api keys and secret inside  `lib/twitter_key.rb` file.
 8. Run `cd bin`
 9. Run `ruby main.rb`
 
@@ -39,7 +39,7 @@
 
 Boot up your terminal and punch in `gem install rspec` to install RSpec. Once that’s done, you can verify your version of RSpec with `rspec --version`, which will output the current version of each of the packaged gems. Take a minute also to hit `rspec --help` and look through the various options available.
 
-- cd into the project and open a terminal.
+- Open Terminal. Navigate to your project folder `cd Twitter-gem-suggestions-bot`.
 - In the teminal just write `rspec` to run the tests.
 
 ## Code picture

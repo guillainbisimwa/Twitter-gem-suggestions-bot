@@ -17,12 +17,13 @@ class RubyOnTwitter
   end
 
   def fetch_100_tweet
-    tweets = @client.user_timeline('@RubygemsN', count: 50) # max_id, since_id
+    tweets = @client.user_timeline('@RubygemsN', count: 100)
     @hash_100_tweet = {}
 
     tweets.each do |tweet|
       @hash_100_tweet[tweet.id.to_s] = format_text(tweet.full_text) unless tweet.id.nil?
     end
+    @hash_100_tweet.length
   end
 
   def format_text(tweet)
@@ -31,19 +32,13 @@ class RubyOnTwitter
     v.split('***')
   end
 
-  def text_
-    @hash_help_dev.each_with_index do |(_k, v), _index|
-      puts "#{v} \n\n"
-    end
-  end
-
   def post_random_tweet
     hash_100_tweet = @hash_100_tweet.to_a.sample
     @client.update("A gem for you! ##{hash_100_tweet[1][0]}, #{hash_100_tweet[1][1]} #{hash_100_tweet[1][2]}")
     "A gem for you! ##{hash_100_tweet[1][0]}, #{hash_100_tweet[1][1]} #{hash_100_tweet[1][2]}"
   end
 
-  def mode_hepl_needed_tweet
+  def suggest_tweet
     @hash_help_dev = {}
 
     @hash_help_dev['code_quality'] = [
@@ -106,7 +101,7 @@ class RubyOnTwitter
     ]
   end
 
-  def catch_help_needed_tweet
+  def catch_suggest_tweet
     @hash_help_dev.each_with_index do |(key, value), _index|
       print '-'
 
@@ -119,38 +114,6 @@ class RubyOnTwitter
         @client.update("@#{tweet.user.screen_name} #{value.sample}", in_reply_to_status_id: tweet.id)
       end
     end
-  end
-
-  def help_a_tweet; end
-end
-
-class String
-  def colorize(color_code)
-    "\e[#{color_code}m#{self}\e[0m"
-  end
-
-  def red
-    colorize(31)
-  end
-
-  def green
-    colorize(32)
-  end
-
-  def yellow
-    colorize(33)
-  end
-
-  def blue
-    colorize(34)
-  end
-
-  def pink
-    colorize(35)
-  end
-
-  def light_blue
-    colorize(36)
   end
 end
 
